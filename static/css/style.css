@@ -1,0 +1,21 @@
+body {
+        background-color: #36454f;
+}
+
+main {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.product_card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffffa;
+    border-radius: 10px;
+}

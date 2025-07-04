@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+
+</head>
+<body>
+<header>
+    <h1 class="title">Товары</h1>
+</header>
+    <main>
+        {% for product in products %}
+            
+            <div class="product_card"> 
+            <a href="/products/{{ product.id }}" class = "product_name">{{ product.name }}</a>  {{ product.price }}₽
+            <img src="{{ url_for('static', path=product.image) }}" width="300"></div>
+        {% endfor %}
+    </main>
+</body>
+</html>

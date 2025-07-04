@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Корзина</h1>
+    {% if cart %}
+        <ul>
+        {% for item in cart.values() %}
+            <li>{{ item.name }} — {{ item.price }}₽ × {{ item.quantity }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Корзина пуста.</p>
+    {% endif %}
+    <a href="/products">← Назад к товарам</a>
+</body>
+</html>

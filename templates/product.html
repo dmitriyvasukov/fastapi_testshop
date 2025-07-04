@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Цена: {{ product.price }}₽</p>
+    <img src="{{ url_for('static', path=product.image) }}" width="300" height="300"></div>
+    <form action="/cart/add" method="post">
+    <input type="hidden" name="product_id" value="{{ product.id }}">
+    <input type="hidden" name="product_name" value="{{ product.name }}">
+    <input type="hidden" name="product_price" value="{{ product.price }}">
+    <button type="submit">Добавить в корзину</button>
+</form>
+    <a href="/products">← Назад к списку</a>
+    
+</body>
+</html> 
